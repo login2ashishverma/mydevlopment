@@ -4,7 +4,7 @@ pipeline {
 
     stage('build') {
       steps {
-        build job: 'SampleAppCICD', propagate: false
+        build()
         echo 'Build success'
       }
     }
