@@ -4,7 +4,8 @@ pipeline {
 
     stage('build') {
       steps {
-        build()
+        buildName "${JOB_NAME}"
+        build job: ${buildName}, propagate: false
         echo 'Build success'
       }
     }
