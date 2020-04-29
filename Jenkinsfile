@@ -4,7 +4,7 @@ pipeline {
 
     stage('build') {
       steps {
-        build job: "${JOB_NAME}", propagate: false
+        echo "Running ${env.JOB_NAME} on ${env.JENKINS_URL}"
         echo 'Build success'
       }
     }
